@@ -1,5 +1,5 @@
 from com.junyeongc.models.titanic.dataset import Dataset
-from com.junyeongc.models.titanic.service import Service
+from com.junyeongc.models.titanic.titanic_service import Service
 
 class Controller:
     dataset = Dataset() 

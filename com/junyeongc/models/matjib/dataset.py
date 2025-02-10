@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 
-class dataset:
+class Matjibdata:
     matjib: object
     context: str
     fname: int
