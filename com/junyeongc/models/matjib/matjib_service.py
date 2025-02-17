@@ -1,4 +1,4 @@
-from com.junyeongc.models.matjib.dataset import Matjibdata
+from com.junyeongc.models.matjib.matjib_dataset import Matjibdata
 import pandas as pd
 
 class Service:

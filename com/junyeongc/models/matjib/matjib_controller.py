@@ -1,5 +1,6 @@
-from com.junyeongc.models.matjib.dataset import Matjibdata
+from com.junyeongc.models.matjib.matjib_dataset import Matjibdata
 from com.junyeongc.models.matjib.matjib_service import Service
+from icecream import ic
 
 class Matjibcontroller:
     dataset = Matjibdata() 
@@ -9,6 +10,6 @@ class Matjibcontroller:
         this = self.dataset
         this.matjib = self.service.new_model(matjib)
         print("🥘맛집 리스트🥘")
-        print(this.matjib)
+        ic(this.matjib)
         return this
         
