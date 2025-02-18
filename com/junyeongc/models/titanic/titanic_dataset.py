@@ -2,58 +2,45 @@ from dataclasses import dataclass
 
 @dataclass
 class Dataset:
-    train: object
-    test: object
     context: str
     fname: str
-    id: str 
+    train: object
+    test: object
+    id: str
     label: str
 
+    @property
+    def context(self) -> str: return self._context
 
     @property
-    def train(self) -> object:
-        return self._train
-
-    @train.setter
-    def train(self, train):
-        self._train = train
+    def fname(self) -> str: return self._fname
 
     @property
-    def test(self) -> object:
-        return self._test
-
-    @test.setter
-    def test(self, test):
-        self._test = test
+    def train(self) -> object: return self._train
 
     @property
-    def context(self) -> str:
-        return self._context
+    def test(self) -> object: return self._test
+
+    @property
+    def id(self) -> str: return self._id
+
+    @property
+    def label(self) -> str: return self._label
 
     @context.setter
-    def context(self, context):
-        self._context = context
-
-    @property
-    def fname(self) -> str:
-        return self._fname
+    def context(self, context): self._context = context
 
     @fname.setter
-    def fname(self, fname):
-        self._fname = fname
+    def fname(self, fname): self._fname = fname
 
-    @property
-    def id(self) -> str:
-        return self._id
+    @train.setter
+    def train(self, train): self._train = train
+
+    @test.setter
+    def test(self, test): self._test = test
 
     @id.setter
-    def id(self, id):
-        self._id = id
-
-    @property
-    def label(self) -> str:
-        return self._label
+    def id(self, id): self._id = id
 
     @label.setter
-    def label(self, label):
-        self._label = label
+    def label(self, label): self._label = label
